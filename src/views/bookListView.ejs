@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="bootply">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title><%=title%> </title>
+</head>
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home </a>
+          </li>
+          <% for(let i = 0; i < nav.length; i++) { %> 
+            <li class="nav-item">
+              <a class="nav-link" href="<%=nav[i].link%>"><%=nav[i].title%></a>
+            </li>
+          <% } %>
+        </ul>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Sign In</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+      
+      <div id="masthead">  
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h1><%=title %> 
+                <p class="lead"></p>
+              </h1>
+            </div>
+            <div class="col-md-5">
+              <div class="well well-lg"> 
+                <div class="row">
+                  <div class="col-sm-12">
+                    
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+        </div><!-- /cont -->
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="top-spacer"> </div>
+            </div>
+          </div> 
+        </div><!-- /cont -->
+        
+      </div>
+      
+      
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-md-12"> 
+            
+            <div class="panel">
+              <div class="panel-body">
+                
+                
+                
+                <!--/stories-->
+                <div class="row row-cols-1 row-cols-md-4">
+                <% for(let i=0; i <  books.length; i++) { %>
+
+                  
+                    <div class="col mb-4">
+                      <div class="card h-100">
+                        <img src="https://randomuser.me/api/portraits/women/9.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><%= books[i].title %></h5>
+                          <h4><span class="label label-default"><%= books[i].author %> </span></h4>
+                          <p class="card-text">
+                            <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • 
+                              <a href="/books/<%=books[i]._id %>" class="text-muted">Read More</a></small>
+                            </p>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    
+                    <!-- <div class="row">    
+                      <br>
+                      <div class="col-md-2 col-sm-3 text-center">
+                        <a class="story-title" href="#"><img alt="" src="http://api.randomuser.me/portraits/thumb/men/58.jpg" style="width:100px;height:100px" class="img-circle"></a>
+                      </div>
+                      <div class="col-md-10 col-sm-9">
+                        <h3><%= books[i].title %></h3>
+                        <div class="row">
+                          <div class="col-xs-9">
+                            <h4><span class="label label-default"><%= books[i].author %> </span></h4><h4>
+                            <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • 
+                              <a href="/books/<%=books[i]._id %>" class="text-muted">Read More</a></small>
+                            </h4></div>
+                          <div class="col-xs-3"></div>
+                        </div>
+                        <br><br>
+                      </div>
+                    </div>
+                    <hr> -->
+                <% } %> 
+                <!--/stories-->
+              </div>
+                
+                
+                <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>
+              
+                
+              </div>
+            </div>
+                                                                                             
+                                                          
+                                                            
+             </div><!--/col-12-->
+        </div>
+      </div>
+                                                      
+                                                                                      
+      <hr>
+      
+      <div class="container" id="footer">
+        <div class="row">
+          <div class="col col-sm-12">
+            
+            <h1>Follow Us</h1>
+            <div class="btn-group">
+             <a class="btn btn-twitter btn-lg" href="#"><i class="icon-twitter icon-large"></i> Twitter</a>
+             <a class="btn btn-facebook btn-lg" href="#"><i class="icon-facebook icon-large"></i> Facebook</a>
+             <a class="btn btn-google-plus btn-lg" href="#"><i class="icon-google-plus icon-large"></i> Google+</a>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <hr>
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <ul class="list-inline">
+                <li><i class="icon-facebook icon-2x"></i></li>
+                <li><i class="icon-twitter icon-2x"></i></li>
+                <li><i class="icon-google-plus icon-2x"></i></li>
+                <li><i class="icon-pinterest icon-2x"></i></li>
+              </ul>
+              
+            </div>
+            <div class="col-sm-6">
+                <p class="pull-right">Built with <i class="icon-heart-empty"></i> at <a href="http://www.bootply.com">Bootply</a></p>      
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+</html>
+<script src="/js/bootstrap.min.js"></script>
